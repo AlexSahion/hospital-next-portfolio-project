@@ -1,0 +1,17 @@
+@import './vars.scss';
+
+body{
+	font-family: var(--font-inter), sans-serif;
+	position: relative;
+	&._lock{
+		 overflow: hidden;
+	}
+}
+
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100%;
+   overflow: hidden;
+}
