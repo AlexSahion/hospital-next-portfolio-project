@@ -1,0 +1,75 @@
+@use '@/shared/styles/vars' as *;
+
+.container{
+	display: flex;
+	align-items: center;
+	min-height: 90px;
+
+	@media (max-width: 768px) {
+		min-height: 80px;
+	}
+
+	@media (max-width: 390px) {
+		justify-content: space-between;
+		column-gap: 15px;
+		min-height: 60px;
+	}
+}
+
+.logo{
+	flex: 0 1 20%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+	@media (max-width: 570px) {
+		flex: 0 1 15%;
+	}
+
+	@media (max-width: 390px) {
+		flex-basis: auto;
+	}
+}
+
+.logoText{
+
+	img{
+		@media (max-width: 768px) {
+			width: 78px;
+		}
+	}
+
+	@media (max-width: 570px) {
+		display: none;
+	}
+}
+
+.logoImage{
+	display: none;
+
+	@media (max-width: 570px) {
+		display: flex;
+		flex-shrink: 0;
+	}
+}
+
+.input{
+	display: flex;
+	flex: 1 1 auto;
+}
+
+.log{
+	display: none;
+	stroke: $color-blue;
+
+	@media (max-width: 390px) {
+		display: flex;
+		flex-shrink: 0;
+	}
+}
+
+.button{
+	@media (max-width: 390px) {
+		display: none !important;
+	}
+}
