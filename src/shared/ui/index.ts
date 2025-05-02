@@ -1,1 +1,5 @@
 export { BaseContainer } from './base-container'
+export { ButtonBlue } from './button-blue'
+export { Logo } from './logo'
+export { SearchInput } from './search-input'
+export { LogoImage } from './logo-image'
