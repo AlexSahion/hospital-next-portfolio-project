@@ -1,0 +1,18 @@
+@use '@/shared/styles/vars' as *;
+
+.button{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $color-blue;
+	color: #fff;
+	font-weight: 600;
+	font-size: 14px;
+	padding: 16px 24px;
+	border-radius: 10px;
+	transition: $default-trans;
+
+	&:hover{
+		background-color: $color-blue-hover;
+	}
+}

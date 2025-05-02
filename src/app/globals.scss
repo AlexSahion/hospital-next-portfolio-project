@@ -1,8 +1,7 @@
 @use "sass:math";
 
-@import "../shared/styles/base.scss";
-@import "../shared/styles/functions";
-@import "../shared/styles/mixins";
-@import "../shared/styles/vars";
-@import "../shared/styles/reset";
-@import "../shared/styles/base";
+@use "../shared/styles/reset" as *;
+@use "../shared/styles/base.scss" as *;
+@use "../shared/styles/functions" as *;
+@use "../shared/styles/mixins" as *;
+@use "../shared/styles/vars" as *;
