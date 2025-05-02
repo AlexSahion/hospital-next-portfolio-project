@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from 'next/font/google'
 import { BaseProvider } from "./_providers";
 import { type PropsWithChildren } from "react";
+import { Header } from "@/widgets";
 
 const inter = Inter({
 	subsets: ['cyrillic'],
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
 		<html lang="en" className={inter.variable}>
 			<body >
 				<BaseProvider>
+					<Header />
 					{children}
 				</BaseProvider>
 			</body>
