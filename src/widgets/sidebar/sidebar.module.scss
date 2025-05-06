@@ -1,0 +1,29 @@
+@use '@/shared/styles/vars' as *;
+
+.container{
+	margin-right: 30px;
+	min-height: 87vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.buttons{
+	display: flex;
+	flex-direction: column;
+	row-gap: 15px;
+}
+
+.info{
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+}
+
+.alert{
+	display: flex;
+	align-items: center;
+	column-gap: 7px;
+	font-size: 14px;
+	color: $color-gray;
+}
