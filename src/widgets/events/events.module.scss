@@ -1,0 +1,40 @@
+@use '@/shared/styles/vars' as *;
+
+.stats{
+	background-color: #fff;
+	border-radius: 20px;
+	padding: 15px 20px 30px 0px;
+}
+
+.top{
+	padding-bottom: 20px;
+	padding-left: 20px;
+	border-bottom: 2px solid rgb(249, 250, 252);
+}
+
+.content{
+	padding-top: 30px;
+	padding-left: 20px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+}
+
+.info{
+	display: flex;
+	align-items: center;
+
+	span{
+		margin-left: 5px;
+	}
+}
+
+.user{
+	margin-right: 12px;
+	stroke: $color-blue;
+}
+
+.userPlus{
+	margin-right: 12px;
+	stroke: $color-green;
+}
