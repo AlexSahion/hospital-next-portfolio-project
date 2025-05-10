@@ -1,16 +1,27 @@
+'use client'
+
 import css from './sidebar.module.scss'
 import cn from 'classnames'
-import { sideBarTabs } from '@/features/sidebar/model'
+import { usePathname } from 'next/navigation'
+import { sideBarTabs } from '@/features/sidebar'
+import { ButtonSidebar } from '@/features/sidebar'
+import { routerMap } from '@/shared/const'
 import { info } from './model/info'
-import { ButtonSidebar } from '@/shared/ui'
+
 
 export const Sidebar = ({ className }: { className?: string }) => {
+	const pathname = usePathname()
+
 	return (
 		<section className={cn(css.container, className)}>
 			<div className={css.buttons}>
-				{sideBarTabs.map(({ label, icon, id }) => (
-					<ButtonSidebar className={css.button} icon={icon} label={label} key={id} />
-				))}
+				{sideBarTabs.map((item) => {
+					const isActive = pathname === item.link
+
+					return (
+						<ButtonSidebar isActive={isActive} className={css.button} key={item.link} {...item} />
+					)
+				})}
 			</div>
 
 			<div className={css.info}>
