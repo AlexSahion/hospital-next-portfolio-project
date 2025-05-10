@@ -1,0 +1,1 @@
+export { OnlineSchoolWidget } from './online-school-widget'

@@ -1,0 +1,1 @@
+export { TextWeigth } from './text-weigth'

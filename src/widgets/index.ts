@@ -1,4 +1,7 @@
 export { Header } from './header'
 export { Sidebar } from './sidebar'
 export { PostFeed } from './post-feed'
-export { RightColumn } from './right-column'
+export { HeaderBanner } from './header-banner'
+export { Stats } from './stats'
+export { Events } from './events'
+export { OnlineSchoolWidget } from './online-school-widget'
