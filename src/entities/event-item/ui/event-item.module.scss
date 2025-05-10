@@ -1,0 +1,57 @@
+@use '@/shared/styles/vars' as *;
+
+.event {
+	cursor: pointer;
+	border-radius: 10px;
+	background: rgb(246, 247, 249);
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 12px;
+	transition: $default-trans;
+
+	@media (hover:hover) {
+		&:hover{
+			box-shadow: 1px 1px 10px #0000003b;
+		}
+	}
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.user {
+	display: flex;
+	align-items: center;
+	column-gap: 6px;
+}
+
+.avatar {
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	row-gap: 3px;
+}
+
+.name {
+	font-size: 12px;
+}
+
+.position {
+	color: $color-blue-gray;
+	font-size: 12px;
+}
+
+.text {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 21px;
+	color: $color-blue-gray;
+}
