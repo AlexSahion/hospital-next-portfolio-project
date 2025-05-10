@@ -1,9 +1,13 @@
-@use '../styles/vars.scss' as *;
+@use '@/shared/styles/vars' as *;
 
-@mixin adaptive-value($property, $startSize, $minSize){
+@mixin adaptive-value($property, $startSize, $minSize) {
 	$addSize: $startSize - $minSize;
-	#{$property}: $startSize + px;
+
+	& {
+		#{$property}: $startSize + px;
+	}
+
 	@media (max-width: #{$container + px}) {
-		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$container - 320}))
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$container - 320}));
 	}
 }
