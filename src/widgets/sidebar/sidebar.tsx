@@ -6,7 +6,7 @@ import { ButtonSidebar } from '@/shared/ui'
 
 export const Sidebar = ({ className }: { className?: string }) => {
 	return (
-		<div className={cn(css.container, className)}>
+		<section className={cn(css.container, className)}>
 			<div className={css.buttons}>
 				{sideBarTabs.map(({ label, icon, id }) => (
 					<ButtonSidebar className={css.button} icon={icon} label={label} key={id} />
@@ -25,6 +25,6 @@ export const Sidebar = ({ className }: { className?: string }) => {
 					)
 				})}
 			</div>
-		</div >
+		</section >
 	)
 }
