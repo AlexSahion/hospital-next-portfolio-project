@@ -1,0 +1,29 @@
+@use '@/shared/styles/mixins' as *;
+
+.header{
+	display: flex;
+	justify-content: space-between;
+	background: url('/assets/banner/bg.png');
+	max-height: 300px;
+	border-radius: 20px;
+	overflow: hidden;
+	@include adaptive-value('padding-left', 100, 10);
+	@include adaptive-value('padding-right', 100, 10);
+}
+
+.title{
+	display: flex;
+	align-items: center;
+	max-width: 200px;
+	font-size: 48px;
+	font-weight: 800;
+	line-height: 58px;
+	color: rgb(43, 52, 80);
+}
+
+.image{
+	transform: translate(0, -20px);
+	img{
+		max-width: 100%;
+	}
+}
