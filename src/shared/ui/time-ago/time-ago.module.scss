@@ -1,0 +1,15 @@
+@use '@/shared/styles/vars' as *;
+
+.time{
+	color: $color-gray;
+	font-size: 12px;
+	display: flex;
+	align-items: center;
+	column-gap: 5px;
+	font-weight: 500;
+
+	svg{
+		stroke: $color-gray;
+		stroke-width: 2.5px;
+	}
+}
