@@ -1,21 +1,17 @@
 import { useEffect, useState } from 'react';
-
-interface Stats {
-	users: string,
-	newUsers: string
-}
+import { getStats } from '../api';
+import { StatsProps } from './types';
 
 export const useStats = () => {
-	const [stats, setStats] = useState<Stats | null>(null)
+	const [stats, setStats] = useState<StatsProps | null>(null)
 
 	useEffect(() => {
-		const fetchStats = async () => {
-			const res = await fetch('/api/stats')
-			const data: Stats = await res.json()
-			setStats(data)
-		}
-
-		fetchStats()
+		getStats()
+			.then(setStats)
+			.catch(err => {
+				console.error(err);
+				setStats(null)
+			})
 	}, [])
 
 	return stats
