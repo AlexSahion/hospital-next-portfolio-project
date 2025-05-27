@@ -14,7 +14,8 @@ export const Events = ({ className }: { className?: string }) => {
 	return (
 		<section className={cn(css.stats, className)}>
 			<div className={css.top}>
-				<h3><TextWeigth text='Back' /></h3>
+				<h3><TextWeigth text='События' /></h3>
+				<div className={css.all}>Все события</div>
 			</div>
 			<div className={css.content}>
 				{items?.map((item) => (
