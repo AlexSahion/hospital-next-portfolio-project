@@ -23,32 +23,6 @@
 	justify-content: space-between;
 }
 
-.user {
-	display: flex;
-	align-items: center;
-	column-gap: 6px;
-}
-
-.avatar {
-	border-radius: 50%;
-	overflow: hidden;
-}
-
-.info {
-	display: flex;
-	flex-direction: column;
-	row-gap: 3px;
-}
-
-.name {
-	font-size: 12px;
-}
-
-.position {
-	color: $color-blue-gray;
-	font-size: 12px;
-}
-
 .text {
 	font-size: 14px;
 	font-weight: 500;
