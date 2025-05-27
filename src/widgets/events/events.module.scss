@@ -7,9 +7,18 @@
 }
 
 .top{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	padding-bottom: 20px;
 	padding-left: 20px;
 	border-bottom: 2px solid rgb(249, 250, 252);
+}
+
+.all{
+	font-size: 12px;
+	font-weight: 500;
+	color: $color-orange;
 }
 
 .content{
