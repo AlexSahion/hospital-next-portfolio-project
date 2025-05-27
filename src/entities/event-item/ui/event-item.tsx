@@ -2,7 +2,7 @@ import css from './event-item.module.scss'
 import cn from 'classnames'
 import Image from 'next/image'
 import { EventItemProps } from '../model'
-import { TextWeigth, TimeAgo } from '@/shared/ui'
+import { TextWeigth, TimeAgo, UserInfo } from '@/shared/ui'
 
 interface Props extends EventItemProps {
 	className?: string,
@@ -13,20 +13,7 @@ export const EventItem = ({ className, ...item }: Props) => {
 	return (
 		<div className={cn(css.event, className)}>
 			<div className={css.header}>
-				<div className={css.user}>
-					<div className={css.avatar}>
-						<Image
-							alt={'event img'}
-							src={avatar}
-							width={28}
-							height={28}
-						/>
-					</div>
-					<div className={css.info}>
-						<div className={css.name}><TextWeigth text={name} /></div>
-						<div className={css.position}>{position}</div>
-					</div>
-				</div>
+				<UserInfo avatar={avatar} name={name} position={position} />
 				<TimeAgo time={time} />
 			</div>
 			<div className={css.content}>
