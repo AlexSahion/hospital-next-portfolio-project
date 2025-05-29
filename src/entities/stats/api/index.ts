@@ -1,1 +1,1 @@
-export { getStats } from './getStats'
+export { getStats } from './get-stats'

@@ -1,0 +1,1 @@
+export { ThankButton } from './ui'

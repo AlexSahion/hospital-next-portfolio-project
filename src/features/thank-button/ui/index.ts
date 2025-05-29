@@ -1,0 +1,1 @@
+export { ThankButton } from './thank-button'

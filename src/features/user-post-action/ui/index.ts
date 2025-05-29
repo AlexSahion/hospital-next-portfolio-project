@@ -1,0 +1,1 @@
+export { UserPostAction } from './user-post-action'
