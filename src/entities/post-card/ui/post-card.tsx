@@ -1,19 +1,41 @@
 import css from './post-card.module.scss'
+import Image from 'next/image'
+import { PostType } from '../model'
 import { TimeAgo, TextWeigth, UserInfo } from '@/shared/ui'
 
-export const PostCard = () => {
+interface PostCardProps {
+	actions: React.ReactNode,
+	thank: React.ComponentType<{ className?: string }>
+	params: PostType
+}
+
+export const PostCard = ({ params, actions, thank: Thank }: PostCardProps) => {
+	const { avatar, likes, name, position, text, time, title, hashtags, image } = params
+
 	return (
 		<div className={css.card}>
-			<div className={css.img}></div>
-			<div className={css.info}>
-				<TimeAgo time='2 н.' />
-			</div>
-			<div className={css.content}>
-				<div className={css.title}><TextWeigth text='Каннабис при cиндроме ломкой Х-хромосомы' /></div>
-				<div className={css.text}>Во время дежурства поступает вызов от фельдшерской бригады с поводом : женщина 20 лет, геморрагический шок. По приезду в адрес следующая картина. Обстановка в квартирке асоциальная, как говорит один мой фельфшер "афроремонт". В одной из комнат, на старом засаленном диване лежит девИца весьма вульгарного вида. Ну да мне то, как говориться, с ней детей не крестить, поэтому по сути : состояние тяжёлое, в сознании, контакт затруднён из за состояния шока, усугублённого алкогольным опьянением и общим негативным отношением ко </div>
+			<div className={css.top}>
+				<div className={css.img}>
+					<Image
+						alt='img'
+						width={327}
+						height={217}
+						src={image}
+					/>
+				</div>
+				<div className={css.info}>
+					<TimeAgo time={time} />
+					<div className={css.help}>Коллеги, помогите</div>
+				</div>
+				<div className={css.content}>
+					<div className={css.title}><TextWeigth text={title} /></div>
+					<div className={css.text}>{text} </div>
+				</div>
 			</div>
 			<div className={css.footer}>
-				<UserInfo avatar='' name='' position='' />
+				<UserInfo className={css.user} avatar={avatar} name={name} position={position} />
+				<Thank className={css.thank} />
+				{actions}
 			</div>
 		</div>
 	)
