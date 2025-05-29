@@ -26,6 +26,12 @@
 	& > * {
 		transition: $default-trans;
 	}
+
+	@media (max-width: 880px) {
+		span{
+			display: none;
+		}
+	}
 }
 
 .buttonActive{
