@@ -1,0 +1,23 @@
+@use '@/shared/styles/vars' as *;
+
+.button{
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	column-gap: 7px;
+	padding: 8px;
+	border-radius: 10px;
+	transition: $default-trans;
+
+	span{
+		color: $color-blue-gray;
+		font-size: 10px;
+		font-weight: 700;
+		line-height: 12px;
+		text-transform: uppercase;
+	}
+
+	&:hover{
+		background-color: $color-hover;
+	}
+}
