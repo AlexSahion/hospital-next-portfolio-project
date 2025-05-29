@@ -28,6 +28,10 @@
 	span{
 		margin-left: 5px;
 	}
+
+	@media (max-width: 440px) {
+		font-size: 13px;
+	}
 }
 
 .user{
