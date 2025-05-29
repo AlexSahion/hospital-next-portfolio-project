@@ -19,6 +19,10 @@
 	display: flex;
 	flex-direction: column;
 	row-gap: 20px;
+
+	@media (max-width: 880px) {
+		display: none;
+	}
 }
 
 .alert{
