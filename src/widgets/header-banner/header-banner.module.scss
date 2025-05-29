@@ -1,4 +1,5 @@
 @use '@/shared/styles/mixins' as *;
+@use '@/shared/styles/functions' as *;
 
 .header{
 	display: flex;
@@ -9,6 +10,19 @@
 	overflow: hidden;
 	@include adaptive-value('padding-left', 100, 10);
 	@include adaptive-value('padding-right', 100, 10);
+
+	@media (max-width: 880px) {
+		max-height: 200px;
+		justify-content: center;
+		background-position: center;
+	}
+
+	@media (max-width: 440px) {
+		flex-direction: column;
+		align-items: center;
+		max-height: 500px;
+		padding-top: 30px;
+	}
 }
 
 .title{
@@ -17,13 +31,37 @@
 	max-width: 200px;
 	font-size: 48px;
 	font-weight: 800;
-	line-height: 58px;
+	line-height: prc(58,48);
 	color: rgb(43, 52, 80);
+
+	@media (max-width: 880px) {
+		font-size: 24px;
+	}
+
+	@media (max-width: 440px) {
+		text-align: center;
+		font-size: 36px;
+	}
 }
 
 .image{
+	flex: 0 0 auto;
 	transform: translate(0, -20px);
+
 	img{
 		max-width: 100%;
+	}
+
+	@media (max-width: 880px) {
+		width: 200px;
+
+		img{
+			height: auto;
+		}
+	}
+
+	@media (max-width: 440px) {
+		width: 250px;
+		transform: translate(-30px, 0px);
 	}
 }
