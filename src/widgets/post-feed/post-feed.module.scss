@@ -1,0 +1,31 @@
+.container{
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	row-gap: 20px;
+
+	& > * {
+		flex: 0 1 32%;
+	}
+
+	@media (max-width: 1580px) {
+		& > * {
+			flex: 0 1 49%;
+		}
+	}
+
+	@media (max-width: 740px) {
+		justify-content: center;
+
+		& > * {
+			flex-basis: 90%;
+		}
+	}
+
+	@media (max-width: 440px) {
+		& > * {
+			flex-basis: 100%;
+		}
+	}
+}
