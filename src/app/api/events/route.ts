@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 export async function GET() {
 	return NextResponse.json([
 		{
-			avatar: '/assets/events/avatar-1.png',
+			avatar: '/assets/avatars/avatar-1.png',
 			name: 'Девятых Т.',
 			position: 'Реаниматолог',
 			time: '1 д.',
@@ -11,7 +11,7 @@ export async function GET() {
 		},
 
 		{
-			avatar: '/assets/events/avatar-2.png',
+			avatar: '/assets/avatars/avatar-2.png',
 			name: 'Doctor News. D.',
 			position: 'Frontend',
 			time: '1 д.',
