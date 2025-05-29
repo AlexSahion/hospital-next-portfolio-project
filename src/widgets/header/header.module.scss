@@ -62,14 +62,14 @@
 	display: none;
 	stroke: $color-blue;
 
-	@media (max-width: 390px) {
+	@media (max-width: 540px) {
 		display: flex;
 		flex-shrink: 0;
 	}
 }
 
 .button{
-	@media (max-width: 390px) {
+	@media (max-width: 540px) {
 		display: none !important;
 	}
 }
