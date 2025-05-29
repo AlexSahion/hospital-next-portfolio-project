@@ -22,6 +22,15 @@ export const OnlineSchoolWidget = ({ className }: { className?: string }) => {
 				<div className={css.subtitle}>Первый урок бесплатно!</div>
 				<OnlineSchoolButton />
 			</div>
+
+			<div className={css.imgWidth}>
+				<Image
+					alt='online-school-img'
+					src={'/assets/online-school/doctor.png'}
+					width={268}
+					height={262}
+				/>
+			</div>
 		</section>
 	)
 }
